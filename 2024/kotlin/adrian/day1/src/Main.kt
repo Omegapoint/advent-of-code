@@ -16,4 +16,11 @@ fun main() {
 
     println("The total distance is $totalDistance units")
 
+    //How often do each number from the left list appear in the right list?
+    // Multiply each number in the left list with the number of times it appears in the right list
+
+    val similarity = list1.map { element ->
+        element * list2.count { it == element }
+    }
+    println("The similarity is ${similarity.sum()}")
 }
